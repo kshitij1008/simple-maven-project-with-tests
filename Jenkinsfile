@@ -33,11 +33,18 @@ pipeline {
 
     stage('Publish to Nexus') {
       steps {
-        sh """
-          mvn deploy \
-            -Dnexus.username=${NEXUS_USER_USR} \
-            -Dnexus.password=${NEXUS_USER_PSW}
+        writeFile file: 'jenkins-settings.xml', text: """
+          <settings>
+            <servers>
+              <server>
+                <id>nexus</id>
+                <username>${NEXUS_USER_USR}</username>
+                <password>${NEXUS_USER_PSW}</password>
+              </server>
+            </servers>
+          </settings>
         """
+        sh 'mvn deploy --settings jenkins-settings.xml'
       }
     }
   }
