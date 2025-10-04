@@ -1,0 +1,9 @@
+<settings>
+  <servers>
+    <server>
+      <id>nexus</id>
+      <username>${NEXUS_USER_USR}</username>
+      <password>${NEXUS_USER_PSW}</password>
+    </server>
+  </servers>
+</settings>
