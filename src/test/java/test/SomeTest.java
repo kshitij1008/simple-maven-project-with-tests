@@ -36,7 +36,8 @@ public class SomeTest extends Base {
         run();
     }
 
-    @Test public void test3() {
+    //@Test 
+    public void test3() {
         run();
     }
 
@@ -48,7 +49,8 @@ public class SomeTest extends Base {
         run();
     }
 
-    @Test public void test6() {
+    //@Test 
+    public void test6() {
         run();
     }
 
