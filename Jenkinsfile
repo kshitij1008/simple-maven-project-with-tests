@@ -13,7 +13,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+        git 'https://github.com/kshitij1008/simple-maven-project-with-tests.git'
       }
     }
 
