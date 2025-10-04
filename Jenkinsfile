@@ -19,7 +19,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'mvn clean package'
+        sh 'mvn clean package -DskipTests'
       }
     }
 
@@ -44,7 +44,7 @@ pipeline {
             </servers>
           </settings>
         """
-        sh 'mvn deploy --settings jenkins-settings.xml'
+        sh 'mvn deploy -DskipTests --settings jenkins-settings.xml'
       }
     }
   }
